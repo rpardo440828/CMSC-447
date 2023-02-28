@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<h1>{% block title %} Add a New Student {% endblock %}</h1>
+
+	<form method="post">
+		<label for="Student">Name</label>
+		<br>
+		<input type="text" name="Student" placeholder="Student's name" 
+			value="{{request.form['Student']}}">
+		</input>
+
+		<br>
+		<label for="ID">ID</label>
+		<br>
+		<input type="number" name="ID" placeholder="Student's ID" 
+			value="{{request.form['ID']}}"></input>
+
+		<br>
+		<label for="Score">Score</label>
+		<br>
+		<input type="number" name="Score" placeholder="Student's score"
+			value="{{request.form['Score']}}"></input>
+
+		<br>
+		<button type="submit">Submit</button>
+	</form>
+{% endblock %}
